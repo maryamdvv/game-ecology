@@ -21,6 +21,10 @@ class View(discord.ui.View):
             await inter.message.channel.send("Вы ответили правильно!!")
         else:
             await inter.message.channel.send("Вы ответили неверно!!")
+        question = random.choice(bd)["q"]
+        view = View()
+        await inter.message.channel.send(question, view=view)
+
         await inter.message.delete()
 
 
@@ -35,8 +39,15 @@ class View(discord.ui.View):
             await inter.message.channel.send("Вы ответили правильно!!")
         else:
             await inter.message.channel.send("Вы ответили неверно!!")
+        question = random.choice(bd)["q"]
+        view = View()
+        await inter.message.channel.send(question, view=view)
         await inter.message.delete()
 
+    @discord.ui.button(label="Стоп", style=discord.ButtonStyle.gray)
+    async def button_stop(self, inter: discord.Interaction, button):
+        await inter.message.channel.send("Игра остановлена,ждем вас еще!")
+        await inter.message.delete()
 
 
 
@@ -47,4 +58,4 @@ async def game(ctx: discord.ext.commands.Context):
     await ctx.send(question,view=view)
 
 
-bot.run("ВАШ ТОКЕН ТУТ")
+bot.run("ВАШ ТОКЕН ЗДЕСЬ")
