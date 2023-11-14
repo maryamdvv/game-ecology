@@ -47,4 +47,4 @@ async def game(ctx: discord.ext.commands.Context):
     await ctx.send(question,view=view)
 
 
-bot.run("MTE3MTQ4OTcwMDkyNjczODU1Mw.GDGa_e.nt94GHtu2mj0h6D8ctTk6s_VG4VlxTZV1E18iI")
+bot.run("ВАШ ТОКЕН ТУТ")
