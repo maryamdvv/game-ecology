@@ -6,6 +6,6 @@
 /game - команда, которая запускает викторину
 ## Установка
 ```sh
-pip install discors
+pip install discord
 ```
 >  Это был выпускной проект школы Kodland курса Python Pro
